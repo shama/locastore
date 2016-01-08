@@ -1,0 +1,33 @@
+{
+  "name": "locastore",
+  "version": "1.0.0",
+  "description": "A localStorage wrapper that falls back to memory in private browsing mode.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && browserify test.js | testron"
+  },
+  "author": "Kyle Robinson Young <kyle@dontkry.com> (http://dontkry.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shama/locastore.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "localStorage",
+    "local",
+    "storage",
+    "store",
+    "private"
+  ],
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "standard": "^5.4.1",
+    "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "global": "^4.3.0"
+  }
+}
