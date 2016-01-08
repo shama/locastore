@@ -67,3 +67,20 @@ test('clear', function (t) {
 
   t.end()
 })
+
+test('cant set null or undefined values', function (t) {
+  t.plan(4)
+  locastore.clear()
+
+  var store = locastore()
+  store.set('test', null)
+  t.equal(store.get('test'), null, 'set value null should be null')
+  store.set('test', undefined)
+  t.equal(store.get('test'), null, 'set value undefined should be null')
+  store.set(null, 'test')
+  t.equal(store.get(null), null, 'set key null should be null')
+  store.set(undefined, 'test')
+  t.equal(store.get(undefined), null, 'set key undefined should be null')
+
+  t.end()
+})

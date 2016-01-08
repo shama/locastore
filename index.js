@@ -24,6 +24,9 @@ Locastore.prototype.get = function (key) {
 }
 
 Locastore.prototype.set = function (key, val) {
+  if (key === null || typeof key === 'undefined' || val === null || typeof val === 'undefined') {
+    return
+  }
   key = this.namespace + '.' + key
   val = JSON.stringify(val)
   memory[key] = val
