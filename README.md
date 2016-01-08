@@ -1,4 +1,4 @@
-# locastore
+# locastore [![Build Status](http://img.shields.io/travis/shama/locastore.svg)](https://travis-ci.org/shama/locastore)
 
 A localStorage wrapper that falls back to memory in private browsing mode.
 
