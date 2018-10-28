@@ -1,6 +1,6 @@
 {
   "name": "locastore",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A localStorage wrapper that falls back to memory in private browsing mode.",
   "main": "index.js",
   "types": "index.d.ts",
