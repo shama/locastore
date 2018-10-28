@@ -6,6 +6,19 @@ A localStorage wrapper that falls back to memory in private browsing mode.
 
 * `npm install locastore`
 
+## use
+
+```js
+const store = require('locastore')()
+```
+
+OR
+
+```js
+import Locastore from "locastore"
+const store = new Locastore()
+```
+
 ## api
 
 ### `var store = new Locastore([namespace])`
@@ -34,4 +47,4 @@ Removes all items from memory and localStorage.
   A simplified localStorage API that just works
 
 # license
-(c) 2016 Kyle Robinson Young. MIT License
+(c) 2018 Kyle Robinson Young. MIT License
