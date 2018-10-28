@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "A localStorage wrapper that falls back to memory in private browsing mode.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "standard && browserify test.js | testron"
   },
