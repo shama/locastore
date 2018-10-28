@@ -8,6 +8,7 @@ function Locastore (ns) {
   if (!(this instanceof Locastore)) return new Locastore(ns)
   this.namespace = ns || ''
 }
+Locastore.default = Locastore
 
 Locastore.prototype.get = function (key) {
   var val
