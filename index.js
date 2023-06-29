@@ -1,8 +1,8 @@
 module.exports = Locastore
 
-var window = require('global/window')
-var ls = typeof window !== 'undefined' && window.localStorage
-var memory = Object.create(null)
+const window = require('global/window')
+const ls = typeof window !== 'undefined' && window.localStorage
+let memory = Object.create(null)
 
 function Locastore (ns) {
   if (!(this instanceof Locastore)) return new Locastore(ns)
@@ -11,7 +11,7 @@ function Locastore (ns) {
 Locastore.default = Locastore
 
 Locastore.prototype.get = function (key) {
-  var val
+  let val
   key = this.namespace + '.' + key
   try {
     val = ls.getItem(key)
@@ -45,9 +45,9 @@ Locastore.prototype.delete = function (key) {
 }
 
 Locastore.prototype.clear = function () {
-  var keys = Object.keys(memory)
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i]
+  const keys = Object.keys(memory)
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i]
     if (key.slice(0, this.namespace.length + 1) === this.namespace + '.') {
       this.delete(key.slice(this.namespace.length + 1))
     }

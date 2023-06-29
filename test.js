@@ -1,21 +1,21 @@
-var test = require('tape')
-var locastore = require('./index.js')
+const test = require('tape')
+const locastore = require('./index.js')
 
 test('get/set', function (t) {
   t.plan(5)
   locastore.clear()
 
-  var store = locastore()
+  const store = locastore()
   t.equal(store.get('test'), null, 'item is null if it doesnt exist')
   store.set('test', 'worked')
   t.equal(store.get('test'), 'worked', 'item was set/get properly')
-  store.set('test', {worked: true})
-  t.deepEqual(store.get('test'), {worked: true}, 'objects were set/get properly')
+  store.set('test', { worked: true })
+  t.deepEqual(store.get('test'), { worked: true }, 'objects were set/get properly')
 
-  var storeNS = locastore('ns')
-  storeNS.set('test', {hasNS: true})
-  t.deepEqual(storeNS.get('test'), {hasNS: true}, 'can set namespaced item')
-  t.deepEqual(store.get('test'), {worked: true}, 'namespaced item doesnt affect the others')
+  const storeNS = locastore('ns')
+  storeNS.set('test', { hasNS: true })
+  t.deepEqual(storeNS.get('test'), { hasNS: true }, 'can set namespaced item')
+  t.deepEqual(store.get('test'), { worked: true }, 'namespaced item doesnt affect the others')
 
   t.end()
 })
@@ -24,8 +24,8 @@ test('delete', function (t) {
   t.plan(4)
   locastore.clear()
 
-  var store = locastore()
-  var storeNS = locastore('ns')
+  const store = locastore()
+  const storeNS = locastore('ns')
   store.set('test', 'worked')
   storeNS.set('test', 'worked')
 
@@ -43,8 +43,8 @@ test('clear', function (t) {
   t.plan(10)
   locastore.clear()
 
-  var store = locastore()
-  var storeNS = locastore('ns')
+  const store = locastore()
+  const storeNS = locastore('ns')
   store.set('test', 'worked')
   store.set('test2', 'worked')
   storeNS.set('test', 'worked')
@@ -72,7 +72,7 @@ test('cant set null or undefined values', function (t) {
   t.plan(4)
   locastore.clear()
 
-  var store = locastore()
+  const store = locastore()
   store.set('test', null)
   t.equal(store.get('test'), null, 'set value null should be null')
   store.set('test', undefined)

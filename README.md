@@ -1,4 +1,4 @@
-# locastore [![Build Status](http://img.shields.io/travis/shama/locastore.svg)](https://travis-ci.org/shama/locastore)
+# locastore
 
 A localStorage wrapper that falls back to memory in private browsing mode.
 
@@ -47,4 +47,4 @@ Removes all items from memory and localStorage.
   A simplified localStorage API that just works
 
 # license
-(c) 2018 Kyle Robinson Young. MIT License
+(c) 2023 Kyle Robinson Young. MIT License
